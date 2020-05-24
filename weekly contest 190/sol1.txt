@@ -1,0 +1,42 @@
+class Solution {
+  
+public int isPrefixOfWord(String sentence, String searchWord) {
+
+        int count =1;
+
+        int i =0;
+  
+        String s = "";
+    
+        while(i<sentence.length()){
+
+            
+          if(sentence.charAt(i)!=32){
+
+               s += sentence.charAt(i);
+          }
+
+          if(s.equals(searchWord)){
+
+                  return count;
+
+              }
+
+            if(sentence.charAt(i)==32)
+
+            {
+
+                s = "";
+
+                count++;
+
+            }
+          
+    i++;
+        }
+
+        return -1;
+ 
+        }
+
+    }
